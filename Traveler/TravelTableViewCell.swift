@@ -13,6 +13,7 @@ class TravelTableViewCell: UITableViewCell {
     
     @IBOutlet var destinationLabel: UILabel!
     @IBOutlet var datesLabel: UILabel!
+    @IBOutlet var tripImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,10 @@ class TravelTableViewCell: UITableViewCell {
     func update(with trip: Trips){
         destinationLabel.text = trip.destination
         datesLabel.text = trip.startDate + " - " + trip.endDate
+        if let tripPic = trip.imageFileName{
+            tripImageView.image = UIImage(named: tripPic)
+        }
+        
     }
 
 }

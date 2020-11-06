@@ -12,7 +12,7 @@ class Trips{
     var destination: String
     var startDate: String
     var endDate: String
-    var imageFileName: String? = nil
+    var imageFileName: String?
     
     init(destination: String, startDate: String, endDate: String) {
         self.destination = destination

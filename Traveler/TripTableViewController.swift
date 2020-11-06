@@ -4,7 +4,10 @@
 //
 //  Created by Letts, Sean Aleksey on 11/5/20.
 //  Copyright © 2020 Letts, Sean Aleksey. All rights reserved.
-//
+// images used
+// beach:https://unsplash.com/photos/RF5U8BkaQHU
+// snowy forest: https://www.twenty20.com/photos/64038666
+//mountain image: https://unsplash.com/photos/Bkci_8qcdvQ
 
 import UIKit
 
@@ -26,6 +29,10 @@ class TripTableViewController: UIViewController, UITableViewDataSource, UITableV
         placesSeen.append(Trips(destination: "Alaska", startDate: "01/01/2015", endDate: "01/10/2015"))
         placesSeen.append(Trips(destination: "Maryland", startDate: "10/10/2014", endDate: "12/12/2014"))
         placesSeen.append(Trips(destination: "DC", startDate: "09/09/2013", endDate: "11/11/2013"))
+        
+        placesSeen[0].imageFileName = "beach"
+        placesSeen[1].imageFileName = "mountains"
+        placesSeen[2].imageFileName = "winter-forest"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,6 +57,8 @@ class TripTableViewController: UIViewController, UITableViewDataSource, UITableV
                     if let indexPath = tableView.indexPathForSelectedRow{
                         let trip = placesSeen[indexPath.row]
                         tripDetailVC.tripOptional = trip
+                        tripDetailVC.position = indexPath.row
+                        tripDetailVC.totalSize = placesSeen.count
                     }
                 }
             }

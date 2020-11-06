@@ -10,11 +10,15 @@ import UIKit
 
 class TripDetailViewController: UIViewController {
     
+    @IBOutlet var tripNumberLabel: UILabel!
     @IBOutlet var destinationLabel: UILabel!
     @IBOutlet var startDateLabel: UILabel!
     @IBOutlet var endDateLabel: UILabel!
+    @IBOutlet var tripImageView: UIImageView!
     
     var tripOptional: Trips? = nil
+    var position: Int? = nil
+    var totalSize: Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,12 @@ class TripDetailViewController: UIViewController {
             destinationLabel.text = "Destination: " + trip.destination
             startDateLabel.text = "Start Date: " + trip.startDate
             endDateLabel.text = "End Date: " + trip.endDate
+            if let tripPic = trip.imageFileName{
+                tripImageView.image = UIImage(named: tripPic)
+            }
+            if let cellPos = position, let size = totalSize{
+                tripNumberLabel.text = "Trip " + String(cellPos) + " of " + String(size)
+            }
         }
     }
     

@@ -25,6 +25,8 @@ class AddTripViewController: UIViewController {
         if let position = postionalOption{
             tripNumberLabel.text = "Add Trip #" + String(position + 1)
         }
+        self.startDateLabel.keyboardType = UIKeyboardType.numbersAndPunctuation
+        self.endDateLabel.keyboardType = UIKeyboardType.numbersAndPunctuation
     }
     
 
