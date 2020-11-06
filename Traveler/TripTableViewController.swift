@@ -73,6 +73,22 @@ class TripTableViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
     }
+    
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem){
+        let newEdittingMode = !tableView.isEditing
+        tableView.setEditing(newEdittingMode, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let tempTrip = placesSeen.remove(at: sourceIndexPath.row)
+        placesSeen.insert(tempTrip, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        placesSeen.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
 
 
 }

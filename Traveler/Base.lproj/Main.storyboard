@@ -74,7 +74,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Trips" id="xhe-gj-WYY">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="DAR-mX-rx1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="DAR-mX-rx1">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="9xL-ld-JZm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="D2m-JW-m3d">
                             <connections>
                                 <segue destination="UjP-By-q1y" kind="show" identifier="AddSegue" id="FdV-08-tb7"/>
