@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		FF517D502554863A00589A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D4F2554863A00589A20 /* AppDelegate.swift */; };
 		FF517D522554863A00589A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D512554863A00589A20 /* SceneDelegate.swift */; };
-		FF517D542554863A00589A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D532554863A00589A20 /* ViewController.swift */; };
+		FF517D542554863A00589A20 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D532554863A00589A20 /* TripTableViewController.swift */; };
 		FF517D572554863A00589A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF517D552554863A00589A20 /* Main.storyboard */; };
 		FF517D592554863D00589A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF517D582554863D00589A20 /* Assets.xcassets */; };
 		FF517D5C2554863D00589A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF517D5A2554863D00589A20 /* LaunchScreen.storyboard */; };
+		FF517D6425548BBA00589A20 /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D6325548BBA00589A20 /* Trips.swift */; };
+		FF517D6625548E5F00589A20 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF517D6525548E5F00589A20 /* TravelTableViewCell.swift */; };
+		FF53D8032554AC89001345CD /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF53D8022554AC89001345CD /* TripDetailViewController.swift */; };
+		FF53D8052554B40D001345CD /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF53D8042554B40D001345CD /* AddTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF517D4C2554863A00589A20 /* Traveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF517D4F2554863A00589A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF517D512554863A00589A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF517D532554863A00589A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF517D532554863A00589A20 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
 		FF517D562554863A00589A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF517D582554863D00589A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF517D5B2554863D00589A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF517D5D2554863D00589A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF517D6325548BBA00589A20 /* Trips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		FF517D6525548E5F00589A20 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		FF53D8022554AC89001345CD /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		FF53D8042554B40D001345CD /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				FF517D4F2554863A00589A20 /* AppDelegate.swift */,
 				FF517D512554863A00589A20 /* SceneDelegate.swift */,
-				FF517D532554863A00589A20 /* ViewController.swift */,
+				FF517D532554863A00589A20 /* TripTableViewController.swift */,
 				FF517D552554863A00589A20 /* Main.storyboard */,
 				FF517D582554863D00589A20 /* Assets.xcassets */,
 				FF517D5A2554863D00589A20 /* LaunchScreen.storyboard */,
 				FF517D5D2554863D00589A20 /* Info.plist */,
+				FF517D6325548BBA00589A20 /* Trips.swift */,
+				FF517D6525548E5F00589A20 /* TravelTableViewCell.swift */,
+				FF53D8022554AC89001345CD /* TripDetailViewController.swift */,
+				FF53D8042554B40D001345CD /* AddTripViewController.swift */,
 			);
 			path = Traveler;
 			sourceTree = "<group>";
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF517D542554863A00589A20 /* ViewController.swift in Sources */,
+				FF53D8052554B40D001345CD /* AddTripViewController.swift in Sources */,
+				FF53D8032554AC89001345CD /* TripDetailViewController.swift in Sources */,
+				FF517D6425548BBA00589A20 /* Trips.swift in Sources */,
+				FF517D542554863A00589A20 /* TripTableViewController.swift in Sources */,
 				FF517D502554863A00589A20 /* AppDelegate.swift in Sources */,
+				FF517D6625548E5F00589A20 /* TravelTableViewCell.swift in Sources */,
 				FF517D522554863A00589A20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
