@@ -42,31 +42,39 @@ class AddTripViewController: UIViewController {
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //information to be returned after editting
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        
         if let identifier = segue.identifier{
             if identifier == "saveUnwind"{
-                if let destination = destinationLabel.text{
-                    if let startDate = startDateLabel.text{
-                        if let endDate = endDateLabel.text{
+                if let destination = destinationLabel.text, destinationLabel.text != ""{
+                    if let startDate = startDateLabel.text, startDateLabel.text != ""{
+                        if let endDate = endDateLabel.text, endDateLabel.text != ""{
                             tripOptional = Trips(destination: destination, startDate: startDate, endDate: endDate)
                         }
                         else{
-                            
+                            //eror: No end date
+                            let alert = UIAlertController(title: "Error", message: "You didn't remeber to enter in an end date!", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                            self.present(alert, animated: true)
                         }
                     }
                     else{
-                        
+                        //error: No start date
+                        let alert = UIAlertController(title: "Error", message: "You didn't remeber to enter in a start date!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        self.present(alert, animated: true)
                     }
                 }
                 else{
-                    
+                    //error: No destination
+                    let alert = UIAlertController(title: "Error", message: "You didn't remeber to enter in an destination!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                    self.present(alert, animated: true)
                 }
+                //NO IDEA WHY MY POP UPS VANISH SO FAST
             }
             else if identifier == "cancelUnwind"{
-                
+                //just do nothing. Cancel = empty
             }
         }
     }

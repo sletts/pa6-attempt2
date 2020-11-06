@@ -32,34 +32,23 @@ class TripDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         displayTrip()
     }
-    
+    //func that displays the relevant information in each cell
     func displayTrip(){
         if let trip = tripOptional{
             destinationLabel.text = "Destination: " + trip.destination
             startDateLabel.text = "Start Date: " + trip.startDate
             endDateLabel.text = "End Date: " + trip.endDate
+            //if there is an image, display it
             if let tripPic = trip.imageFileName{
                 tripImageView.image = UIImage(named: tripPic)
             }
+            //unwraps the numbers needed for the top label
             if let cellPos = position, let size = totalSize{
-                tripNumberLabel.text = "Trip " + String(cellPos) + " of " + String(size)
+                tripNumberLabel.text = "Trip " + String(cellPos + 1) + " of " + String(size)
             }
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
- */
-    
-
 }
