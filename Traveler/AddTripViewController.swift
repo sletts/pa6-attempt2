@@ -16,7 +16,7 @@
 
 import UIKit
 
-class AddTripViewController: UIViewController {
+class AddTripViewController: UIViewController, UITextFieldDelegate {
     var tripOptional: Trips? = nil
     var postionalOption: Int? = nil
     
@@ -35,8 +35,22 @@ class AddTripViewController: UIViewController {
         }
         self.startDateLabel.keyboardType = UIKeyboardType.numbersAndPunctuation
         self.endDateLabel.keyboardType = UIKeyboardType.numbersAndPunctuation
+        
+        //if let friday = dateFormatter.date(from: rnfgergergn)
     }
     
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        print("background tapped")
+        destinationLabel.resignFirstResponder()
+        startDateLabel.resignFirstResponder()
+        endDateLabel.resignFirstResponder()
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // this callback is executed when the user presses the return key on the keypad
+        textField.resignFirstResponder()
+        return true
+    }
 
     
     // MARK: - Navigation
